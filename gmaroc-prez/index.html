@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+           
+  URL: http://code.google.com/p/html5slides/
+  
+  gDays HTML5 : à la redécouverte du web
+  Author : Zakaria El Fassi (Content + Code)
+-->
+
+<html>
+  <head>
+    <title>HTML5 : à la redécouverte du web.</title>
+
+    <meta charset='utf-8'>
+    <script src='./gmaroc-prez/rsc/slides.js'></script>
+    <script src="./gmaroc-prez/rsc/jquery.min.js"></script>
+    <script src="./gmaroc-prez/rsc/js.js"></script> 
+  </head>
+  
+  <style>
+	#doraemon{
+	  padding-top: 10px;
+	  margin: auto;
+	}
+	#instr{
+	    float:right;
+	    width:400px;
+	    font-size:14px;
+	    border-left:2px solid black;
+	    padding-left:20px;
+	}
+	
+	#face{
+	    position:relative;
+	    width:310px;
+	    height:300px;
+	    background:#3369E8;
+	    border:#333 2px solid;
+	    margin: auto;
+	}
+	
+	#base{
+	    position:relative;
+	    top:-5px;
+	}
+	
+	#base_white{
+	    position:absolute;
+	    border:#000 2px solid;
+	    width:264px;
+	    height:196px;
+	    background:#009925;
+	    z-index:1;
+	    top:85px;
+	    left:22px;
+	}
+	
+	#eyes{
+	    position:relative;
+	    top:-5px;
+	}
+	
+	div.eye{
+	    position:absolute;
+	    border:2px solid #000;
+	    width:72px;
+	    height:83px;
+	    z-index:20;
+	    background:#fff;
+	}
+	
+	div.black_eye{
+	    position:absolute;
+	    width:15px;
+	    height:15px;
+	    background:#333;
+	    z-index:21;
+	}
+	
+	div.black_left{
+	    top:100px;
+	    left:130px;
+	}
+	
+	div.black_right{
+	    top:100px;
+	    left:170px;
+	}
+	
+	div.eye_left{
+	    top:45px;
+	    left:82px;
+	}
+	
+	div.eye_right{
+	    top:45px;
+	    left:156px;
+	}
+	
+	#nose{
+	    width:32px;
+	    height:32px;
+	    border:2px solid #000;
+	    background:#D50F25;
+	    position:absolute;
+	    top:117px;
+	    left:139px;
+	    z-index:30;
+	}
+	
+	#nose_light{
+	    width:10px;
+	    height:10px;
+	    border-radius:5px;
+	    -webkit-border-radius:5px;
+	    -moz-border-radius:5px;
+	    position:relative;
+	    top:0px;
+	    left:0px;
+	}
+	
+	#nose_line{
+	    background:#000;
+	    width:4px;
+	    height:100px;
+	    top:125px;
+	    left:156px;
+	    position:absolute;
+	}
+	
+	#nose_line{
+	    background:#333;
+	    width:3px;
+	    height:100px;
+	    top:140px;
+	    left:155px;
+	    position:absolute;
+	    z-index:20;
+	}
+	
+	#mouthy{
+	    width:240px;
+	    height:500px;
+	    border-bottom:3px solid #333;
+	    position:absolute;
+	    top:-263px;
+	    left:36px;
+	    z-index:10;
+	}
+	
+	#mouthy_rewrite{
+	    background:#EEB211;
+	    width:240px;
+	    height:90px;
+	    position:relative;
+	    top:115px;
+	    left:35px;
+	    z-index:12;
+	    border-radius:45px;
+	    -webkit-border-radius:45px;
+	    -moz-border-radius:60px;
+	}
+	
+	#firefox_mouthy, x:-moz-broken, x:last-of-type, x:indeterminate {
+	    position:relative;
+	    width:170px;
+	    height:150px;
+	    -moz-border-radius:85px;
+	    border:3px solid #000;
+	    background:#FFF;
+	    z-index:11;
+	    top:-3px;
+	    left:70px;
+	}
+	
+	.whiskers{
+	    background:#333;
+	    height:2px;
+	    width:60px;
+	    position:absolute;
+	    z-index:20;
+	}
+	.whi_right{
+	    top:165px;
+	    left:210px;
+	}
+	
+	.whi_right_top{
+	    top:145px;
+	    left:210px;
+	}
+	
+	.whi_right_bottom{
+	    top:185px;
+	    left:210px;
+	}
+	
+	.whi_left{
+	    top:165px;
+	    left:50px;
+	}
+	.whi_left_top{
+	    top:145px;
+	    left:50px;
+	}
+	
+	.whi_left_bottom{
+	    top:185px;
+	    left:50px;
+	}
+  </style>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+        
+        
+      
+      <article class='biglogo'>
+      </article>
+
+      <article title="presentation title">
+        <h1>
+          HTML5
+          <br>
+           à la redécouverte du web.
+        </h1>
+        <p>
+          <a href="https://plus.google.com/108433806411556476410">+Zakaria El Fassi</a>
+          <br><br><br><br>
+          Juin 2012
+          <br>
+          #gmaroc
+          <br><br>
+          <i>postez vos questions sur G+ > #gmaroc </i>
+        </p>
+      </article>
+
+      <article title="sommaire">
+        <h3>
+          Sommaire
+        </h3>
+        <ul class="build">
+          <li>
+            Histoire du web en 5 minutes.
+          </li>
+          <li>
+            HTML5, c'est quoi exactement ?
+          </li>
+          <li>
+            HTML5, les nouveautés.
+          </li>
+          <li>
+          	Questions/Réponses.
+          </li>
+        </ul>
+        <div class="source">* => Question surprise = cadeau !</div>
+      </article>
+
+      <article>
+      	<h2>
+      		Question ...
+      	</h2>
+      </article>
+            
+      <article>
+      	<h2>
+      		Un peu d'histoire ?
+      	</h2>
+      </article>
+      
+      <article class="fill">
+      	<iframe src='http://evolutionofweb.appspot.com/?hl=fr'></iframe>
+      </article>
+      
+      <article>
+        <h3>
+          HTML5, c'est quoi exactement ?
+        </h3>
+        <ul>
+          <li>
+            HTML
+          </li>
+          <li>
+            CSS
+          </li>
+          <li>
+            JS
+          </li>
+        </ul>
+        <div class="source">
+          <details><summary>*</summary>CSS c'est l'acronyme anglais de ...?</details>
+        </div>
+      </article>
+      
+      <article>
+        <h3>
+          <i>(Quelques)</i> Technologies HTML5
+        </h3>
+        <ul>
+			<li>Sémantique et Markup</li>
+			<li>CSS3</li>
+			<li>Graphique et multimédia</li>
+			<li>Accès hors ligne / Stockage</li>
+			<!--
+			<li>Temps-réel / Communication</li>
+			<li>Accès aux fichiers et matériel</li>
+			-->
+			<li>Nuts &amp; Bolts</li>
+        </ul>
+      </article>      
+      
+      <article class="smaller">
+      	<h3>
+      		Sémantique et Markup de base
+      	</h3>
+      	<section>
+      		<pre>
+&lt;!DOCTYPE html&gt;
+      		</pre>
+      	</section>
+      	
+      	<section>
+      		<pre>
+&lt;body&gt;
+  <b>&lt;header&gt;</b>
+    <b>&lt;hgroup&gt;</b>
+      &lt;h1&gt;Page title&lt;/h1&gt;
+      &lt;h2&gt;Page subtitle&lt;/h2&gt;
+    &lt;/hgroup&gt;
+  &lt;/header&gt;
+        		</pre>
+      	</section>
+      	
+      	<section>
+      		<pre>
+<b>&lt;nav&gt;</b>
+  &lt;ul&gt;
+    Navigation...
+  &lt;/ul&gt;
+&lt;/nav&gt;
+      		</pre>
+      	</section>
+      </article>
+      
+      <article class="smaller">
+      	<h3>
+      		Sémantique et Markup de base
+      	</h3>
+      	<section>
+      		<pre>
+<b>&lt;section&gt;</b>
+   <b>&lt;article&gt;</b>
+     <b>&lt;header&gt;</b>
+       &lt;h1&gt;Title&lt;/h1&gt;
+     &lt;/header&gt;
+     &lt;section&gt;
+       Content...
+     &lt;/section&gt;
+   &lt;/article&gt;
+   <b>&lt;article&gt;</b>
+     <b>&lt;header&gt;</b>
+       &lt;h1&gt;Title&lt;/h1&gt;
+     &lt;/header&gt;
+     &lt;section&gt;
+       Content...
+     &lt;/section&gt;
+   &lt;/article&gt;
+&lt;/section&gt;
+      		</pre>
+      	</section>
+      </article>
+
+      <article class="smaller">
+      	<h3>
+      		Sémantique et Markup de base
+      	</h3>
+      	<section>
+      		<pre>
+  <b>&lt;aside&gt;</b>
+   Top links...
+  &lt;/aside&gt;
+
+  <b>&lt;figure&gt;</b>
+    &lt;img src="..."/&gt;
+    <b>&lt;figcaption&gt;Chart 1.1&lt;/figcaption&gt;</b>
+  &lt;/figure&gt;
+
+  <b>&lt;footer&gt;</b>
+   Copyright ©
+   <b>&lt;time datetime="2012-12-21"&gt;</b>2012&lt;/time&gt;
+  &lt;/footer&gt;
+&lt;/body&gt;
+      		</pre>
+      	</section>
+      </article>
+      
+      <article class="smaller">
+      	<h3>
+      		Sémantique et Markup pour applications
+      	</h3>
+      	<section>
+      		<pre>
+&lt;details&gt;
+  &lt;summary&gt;Click me !&lt;/summary&gt;
+  Le web est bien meilleur avec du HTML5! non?
+&lt;/details&gt;
+      		</pre>
+      	</section>
+      	
+		<details>
+		  <summary>Click me !</summary>
+		  Le web est bien meilleur avec du HTML5! non?
+		</details>
+
+      	<section>
+      		<pre>
+&lt;meter min="0" max="100" low="40" high="90" optimum="100" value="10"&gt;
+  C-
+&lt;/meter&gt;
+&lt;meter min="0" max="100" low="40" high="90" optimum="100" value="40"&gt;
+  B
+&lt;/meter&gt;
+&lt;meter min="0" max="100" low="40" high="90" optimum="100" value="90"&gt;
+  A+
+&lt;/meter&gt;
+      		</pre>
+      	</section>
+      	<meter min="0" max="100" low="40" high="90" optimum="100" value="10">C-</meter>		
+		<meter min="0" max="100" low="40" high="90" optimum="100" value="40">B</meter>
+		<meter min="0" max="100" low="40" high="90" optimum="100" value="90">A+</meter>
+      </article>  
+
+      <article>
+      	<h3>
+      		Sémantique et Markup pour applications
+      	</h3>
+      	<section>
+      		<pre>
+&lt;progress&gt;En cours ...&lt;/progress&gt;
+      		</pre>
+      	</section>
+      	<progress>En cours ...</progress>
+      	
+      	<section>
+      		<pre>
+&lt;progress value="25" max="100"&gt;le quart&lt;/progress&gt;
+&lt;progress value="75" max="100"&gt;3/4&lt;/progress&gt;
+      		</pre>
+      	</section>
+<progress value="25" max="100">le quart</progress>
+<progress value="75" max="100">3/4</progress>
+      </article>
+
+      <article class="smaller">
+      	<h3>
+      		Sémantique et Markup pour applications
+      	</h3>
+      	<section>
+      		<pre>
+&lt;style&gt;
+  [required] {
+    border-color: #88a;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 255, .5);
+  }
+  :invalid {
+    border-color: red;
+    -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+  }
+&lt;/style&gt;
+
+&lt;input type="text" required /&gt;
+&lt;input type="email" value="some@gmail.com" /&gt;
+&lt;input type="date" min="2010-10-10" max="2012-12-21" value="2012-05-10" /&gt;
+&lt;input type="range" min="0" max="50" value="10" /&gt;
+&lt;input type="search" results="10" placeholder="Rechercher ..." /&gt;
+&lt;input type="color" placeholder="e.g. #AH063298" /&gt;
+&lt;input type="number" step="2" min="-10" max="20" value="0" /&gt;
+      		</pre>
+      	</section>
+      	
+		<style>
+		  [required] {
+		    border-color: #88a;
+		    -webkit-box-shadow: 0 0 3px rgba(0, 0, 255, .5);
+		  }
+		  :invalid {
+		    border-color: red;
+		    -webkit-box-shadow: 0 0 5px rgba(255, 0, 0, .8);
+		  }
+		</style>
+		<input type="text" required />
+		<input type="email" value="some@gmail.com" />
+		<input type="date" min="2010-10-10" max="2012-12-21" value="2012-05-10" />
+		<input type="range" min="0" max="50" value="10" />
+		<input type="search" results="10" placeholder="Rechercher ..." />
+		<input type="color" placeholder="e.g. #AH063298" />
+		<input type="number" step="2" min="-10" max="20" value="0" />
+		
+		<div class="source">
+		<details><summary>*</summary>Chassez l'erreur !</details>
+		</div>
+      </article>
+
+      <article>
+      	<h3>
+      		CSS3 : Webfonts
+      	</h3>
+      	<p><i>Essayez <a href="http://www.google.com/webfonts">http://www.google.com/webfonts</a> !</i> <img src="gmaroc-prez/images/fonts-api.gif"/></p>
+		<style>
+		@font-face {
+		  font-family: 'greatvibes';
+		  src: url(gmaroc-prez/rsc/GreatVibes-Regular.ttf);
+		}
+		@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+		font-family: 'Great Vibes', cursive;
+		</style>
+      	<section>
+      		<pre>
+&lt;style&gt;
+@font-face {
+  font-family: 'greatvibes';
+  src: url(rsc/GreatVibes-Regular.ttf);
+}
+
+/** Ou ... */
+
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+font-family: 'Great Vibes', cursive;
+&lt;/style&gt;
+      		</pre>
+      	</section>
+
+
+<span style="font-family: 'greatvibes'">Hello, Great African vibes !</span>
+      </article>
+
+      <article class="smaller">
+      	<h3>
+      		CSS3 : Demo.
+      	</h3>
+		<style>
+		  #doraemon {
+		    height: 320px;
+		  }
+		  #doraemon iframe {
+		    width: 100%;
+		    height: 100%;
+		    border: none;
+		  }
+		</style>
+      	<section>
+            <pre>
+  face: <b>border-radius</b>: <span id="face-rounded-border-value">0</span>px; <input id="face-rounded-border" type="range" min="0" max="146" value="0" onchange="handleCorner(event)">
+  left eye: <b>border-radius</b>: <span id="lefteye-rounded-border-value">0</span>px; <input id="lefteye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+  right eye: <b>border-radius</b>: <span id="righteye-rounded-border-value">0</span>px; <input id="righteye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+  base white: <b>border-radius</b>: <span id="base_white-rounded-border-value">0</span>px; <input id="base_white-rounded-border" type="range" min="0" max="150" value="0" onchange="handleCorner(event)">
+  nose: <b>border-radius</b>: <span id="nose-rounded-border-value">0</span>px; <input id="nose-rounded-border" type="range" min="0" max="50" value="0" onchange="handleCorner(event)">
+  left black eye: <b>border-radius</b>: <span id="leftblackeye-rounded-border-value">0</span>px; <input id="leftblackeye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+  right black eye: <b>border-radius</b>: <span id="rightblackeye-rounded-border-value">0</span>px; <input id="rightblackeye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)">
+            </pre>
+      	</section>
+
+		<div id="doraemon">
+			<div id="face">
+			    <div id="eyes">
+			        <div id="lefteye" class="eye eye_left"></div>
+			        <div id="leftblackeye" class="black_eye black_left"></div>
+			
+			        <div id="righteye" class="eye eye_right"></div>
+			        <div id="rightblackeye" class="black_eye black_right"></div>
+			    </div>
+			    <div id="base">
+			        <div id="base_white"></div>
+			        <div id="nose">
+			            <div id="nose_light"></div>
+			        </div>
+			        <div id="nose_line"></div>
+			        <!--<div id="mouthy"></div>-->
+			        <div id="mouthy_rewrite"></div>
+			        <div id="firefox_mouthy"></div>
+			
+			        <div class="whiskers whi_right_top rotate160"></div>
+			        <div class="whiskers whi_right"></div>
+			        <div class="whiskers whi_right_bottom rotate20"></div>
+			
+			        <div class="whiskers whi_left_top rotate20"></div>
+			        <div class="whiskers whi_left"></div>
+			        <div class="whiskers whi_left_bottom rotate160"></div>
+			    </div>
+			</div>
+		</div>
+
+        <script>
+          function handleCorner() {
+            //var doraemon = document.querySelector('#doraemon').contentWindow.document;
+             var elements = ["face", "lefteye", "righteye", "base_white", "nose", "leftblackeye", "rightblackeye"];
+             for (var i = 0; i < elements.length; i++) {
+               var element = elements[i] + '-rounded-border';
+               var borderVal = document.getElementById(element).value;
+               document.getElementById(element + '-value').textContent = borderVal;
+               var faceEl = document.getElementById(elements[i]);
+               faceEl.style.borderRadius = borderVal + 'px';
+               faceEl.style.mozBorderRadius = borderVal + 'px';
+             }
+           }
+        </script>      	
+      	
+      </article>
+      
+      <article class="smaller">
+      	<h3>
+      		CSS3 : Du style, sans images !
+      	</h3>
+		<style>
+			.cool-div {
+				color: #FFFFFF;
+				text-shadow: 2px 2px 4px #000000;
+				-webkit-border-radius: 10px;
+				border: 10px solid #009925;
+				height: 70px;
+				text-align: center;
+				background: -webkit-gradient(linear, left top, left bottom, 
+                             from(#D50F25), to(yellow), 
+                             color-stop(0.5, red), color-stop(0.5, #EEB211));
+                line-height: 2.2em;
+                -webkit-transform: rotateZ(5deg);
+				-webkit-transition: -webkit-transform 2s ease-in-out;
+			}
+			.cool-div:hover {
+				-webkit-transform: rotateZ(-5deg);
+			}
+		</style>
+      	<section>
+      		<pre>
+&lt;style&gt;
+	.cool-div {
+		color: #FFFFFF;
+		text-shadow: 2px 2px 4px #000000;
+		-webkit-border-radius: 10px;
+		border: 10px solid #009925;
+		height: 70px;
+		text-align: center;
+		background: -webkit-gradient(linear, left top, left bottom, 
+                     from(#D50F25), to(yellow), 
+                     color-stop(0.5, red), color-stop(0.5, #EEB211));
+        line-height: 2.2em;
+        -webkit-transform: rotateZ(5deg);
+		-webkit-transition: -webkit-transform 2s ease-in-out;
+	}
+	.cool-div:hover {
+		-webkit-transform: rotateZ(-5deg);
+	}
+&lt;/style&gt;
+      		</pre>
+      	</section>
+      	
+		<div class="cool-div">
+			CSS3 is way cooler than CSS2 !
+		</div>
+      </article>      
+
+      <article class="smaller">
+      	<h3>
+      		Graphique et Multimédia : Demo
+      	</h3>
+      	<iframe src='http://www.google.com/logos/2011/lespaul.html' style="height: 250px; border: none; margin-top: 100px" scrolling="no"></iframe>
+      </article>
+
+      <article>
+      	<h3>
+      		Graphique et Multimédia : Audio et video.
+      	</h3>
+		<section>
+			<pre>
+&lt;audio id="audio" src="loop.mp3" loop="true" controls&gt;&lt;/audio&gt;				
+			</pre>
+		</section>
+		<audio id="audio" src="/gmaroc-prez/rsc/loop.mp3" loop="true" controls></audio>
+		<section>
+			<pre>
+&lt;video id="video" src="glass.webm" height="250" controls&gt;&lt;/video&gt;				
+			</pre>
+		</section>
+		<video id="video" src="/gmaroc-prez/rsc/glass.webm" height="250" controls></video>
+      </article>
+
+      <article class="smaller">
+      	<h3>
+      		Graphique et Multimédia : Canvas 2D.
+      	</h3>
+		<section>
+			<pre>
+&lt;canvas id="super-canvas" width="600" height="300"&gt;&lt;/canvas&gt;
+&lt;script&gt;
+  var ctx = document.getElementById("super-canvas").getContext("2d");
+  ctx.fillStyle="#EEB211";
+  ctx.fillRect(240, 50, 20, 20); //X,Y,h,w
+  
+  ctx.fillStyle="#D50F25";
+  ctx.fillRect(350, 50, 20, 20); //X,Y,h,w
+  		  
+  ctx.beginPath();
+  ctx.arc(300, 110, 100, Math.PI, Math.PI * 2, true); //x,y,r,startAngle,endAngle,aClockwise
+  ctx.lineWidth = 10;
+  ctx.lineCap = 'round';
+  ctx.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+  ctx.stroke();
+  ...
+&lt;/script&gt;
+			</pre>
+		</section>
+		<canvas id="super-canvas" width="600" height="300"></canvas>
+		<script>
+		  var ctx = document.getElementById("super-canvas").getContext("2d");
+		  ctx.fillStyle="#EEB211";
+		  ctx.fillRect(240, 0, 20, 20); //X,Y,h,w
+		  
+		  ctx.fillStyle="#D50F25";
+		  ctx.fillRect(350, 0, 20, 20); //X,Y,h,w
+		  		  
+		  ctx.beginPath();
+		  ctx.arc(300, 70, 100, Math.PI, Math.PI * 2, true); //x,y,r,startAngle,endAngle,aClockwise
+		  ctx.lineWidth = 10;
+		  ctx.lineCap = 'round';
+		  ctx.strokeStyle = 'rgba(255, 127, 0, 0.5)';
+		  ctx.stroke();
+
+		  ctx.beginPath();
+		  ctx.arc(305, 70, 20, 0, Math.PI * 2, true); //x,y,r,startAngle,endAngle,aClockwise
+		  ctx.lineWidth = 5;
+		  ctx.lineCap = 'round';
+		  ctx.strokeStyle = 'rgba(213, 15, 37, 0.4)';
+		  ctx.stroke();
+		</script>
+      </article>
+      
+      <article>
+      	<h2>
+      		Graphique et Multimédia : Canvas 3D (WebGL).
+      	</h2>
+      	<a href="http://data-arts.appspot.com/globe" target="_blank">Globe</a>
+      </article>
+      <!--
+      <article class="fill">
+     	<iframe src="http://data-arts.appspot.com/globe"></iframe>
+      </article>
+      -->
+      <article class="smaller">
+      	<h3>
+      		Accès hors ligne / Stockage : Web Storage
+      	</h3>
+      	<section>
+      		<pre>
+&lt;textarea id="storage-text-area" rows="8" cols="60"&gt;&lt;/textarea&gt;
+&lt;button id="localstorage-save"&gt;Save !&lt;/button&gt;
+
+&lt;script&gt;
+	// LocalStorage =&gt; persistent storage
+	// SessionStorage =&gt; per tab storage
+	var saveButton = document.getElementById('localstorage-save');
+	var storageTextArea = document.getElementById('storage-text-area');
+	saveButton.addEventListener('click', function () {
+	  window.localStorage.setItem('gdays', storageTextArea.value);
+	  window.localStorage.setItem('timestamp', (new Date()).getTime());
+	}, false);
+	storageTextArea.value = window.localStorage.getItem('gdays');
+&lt;/script&gt;      			
+      		</pre>
+      	</section>
+		<textarea id="storage-text-area" rows="8" cols="60"></textarea>
+		<button id="localstorage-save">Save !</button>
+		<script>
+			// LocalStorage => persistent storage
+			// SessionStorage => per tab storage
+			var saveButton = document.getElementById('localstorage-save');
+			var storageTextArea = document.getElementById('storage-text-area');
+			saveButton.addEventListener('click', function () {
+			  window.localStorage.setItem('gdays', storageTextArea.value);
+			  window.localStorage.setItem('timestamp', (new Date()).getTime());
+			}, false);
+			storageTextArea.value = window.localStorage.getItem('gdays');
+		</script>
+      </article>
+      
+      <article id="slide-orientation">
+      	<h3>
+      		Nuts &amp; Bolts : Device orientation.
+      	</h3>
+		<section>
+			<div id="or-div" style="position: absolute; display: block;">
+				<pre id="orientation-pre">window.addEventListener(<b>"deviceorientation"</b>, function(event) {
+	  var a = event.alpha; <b><span id="orientation-a"></span></b> 
+	  var b = event.beta;  <b><span id="orientation-b"></span></b> 
+	  var g = event.gamma; <b><span id="orientation-g"></span></b> 
+				}</pre>
+			</div>
+		</section>
+		<script>
+		  var orientationA = $('#orientation-a').get(0);
+		  var orientationB = $('#orientation-b').get(0);
+		  var orientationG = $('#orientation-g').get(0);
+		  function setOrientation(evt) {
+		    if (evt.alpha) { orientationA.textContent = '// ' + evt.alpha; }
+		    if (evt.beta) { orientationB.textContent = '// ' + evt.beta; }
+		    if (evt.gamma) { orientationG.textContent = '// ' + evt.gamma; }
+		    if (Math.abs(evt.gamma) > 5) {
+		      $('#or-div').css('-webkit-transform', 'rotate(' + -evt.gamma + 'deg)');
+		    } else {
+		      $('#or-div').css('-webkit-transform', 'rotate(0deg)');
+		    } 
+		  };
+		  function startOrientationDemo() {
+		    window.addEventListener("deviceorientation", setOrientation, true);    
+		  };
+		  function stopOrientationDemo() {
+		    window.removeEventListener("deviceorientation", setOrientation, true);        
+		  };
+		  startOrientationDemo();
+		</script> 
+
+      </article>     
+
+      <article>
+      	<h3>
+      		Nuts &amp; Bolts : Device orientation : Demo.
+      	</h3>
+      	<style>
+			#orientationWrap {
+			  width: 300px;
+			  height: 300px;
+			  position: relative;  
+			}
+			#orientationWrap .layer {
+			  position: absolute;
+			  left: 0;
+			  top: 0;
+			  -webkit-transition-property: x, y;
+			  -webkit-transition-duration: 0.1s;
+			  -webkit-transition-timing-function: linear;
+			}
+			#slide-orientation-2{
+				margin-left: 30%;
+				margin-top: 21%;
+			}
+      	</style>
+		<div id="slide-orientation-2"> 
+		  <section class="flex hbox boxcenter"> 
+		    <div class="noflex vbox boxcenter"> 
+				<div id="orientationWrap"> 
+					<div class="layer"><img src="gmaroc-prez/rsc/chrome-layer-01.png"/></div> 
+					<div class="layer"><img src="gmaroc-prez/rsc/chrome-layer-02.png"/></div> 
+					<div class="layer"><img src="gmaroc-prez/rsc/chrome-layer-03.png"/></div> 
+					<div class="layer"><img src="gmaroc-prez/rsc/chrome-layer-04.png"/></div> 
+					<div class="layer"><img src="gmaroc-prez/rsc/chrome-layer-05.png"/></div> 
+				</div>
+				</section>
+			</div>
+		</div>
+		<script>
+			//debugger;
+  			var os = new OrientationSlide('#slide-orientation-2');
+		</script> 
+      </article>     
+
+      <article>
+      	<h3>
+      		Nuts &amp; Bolts : Speech input.
+      	</h3>
+      	<section>
+      		<pre>
+&lt;input type="text" speech x-webkit-speech /&gt;      			
+      		</pre>
+      	</section>
+      	<input type="text" style="width: 300px; padding: 5px 10px 5px 10px;" speech x-webkit-speech />
+      	<p>Essayez d'ajouter le tag sur la page d'accueil <a href="http://www.google.ma" target="_blank">google.ma</a> !</p>
+      </article>
+
+      <article class="smaller">
+      	<h3>
+      		Nuts &amp; Bolts : Nouveaux selecteurs.
+      	</h3>
+		<p>DOM API</p>
+		<section>
+			<pre>
+var el = document.getElementById('section1');
+
+var els = document.getElementsByTagName('div');
+
+var els = document.getElementsByClassName('section');
+			</pre>
+		</section>
+		<p>Selectors API</p>
+		<section>
+			<pre>
+var els = document.querySelectorAll("ul li:nth-child(odd)");
+var tds = document.querySelectorAll("table.test > tr > td");
+var el = document.querySelector("table.test > tr > td"); // el == tds[0]				
+			</pre>
+		</section>
+		
+      </article>
+<!--
+      <article>
+      	<h3>
+      		Nuts &amp; Bolts : attributs data-*
+      	</h3>
+      	<p>Cool stuff !!</p>
+      </article>
+-->
+      <article>
+      	<h3>
+      		Chrome frame
+      	</h3>
+      	<ul>
+      		<li>Efforts pour faire adapter IE6, 7, 8 aux dernière technologies HTML5.</li>
+      		<li>Deux façons pour rendre votre site compatible avec Chrome Frame :</li>
+      	</ul>
+      	<section>
+      		<pre>
+//Client side
+&lt;meta http-equiv="X-UA-Compatible" content="chrome=1"&gt;
+      		</pre>
+      	</section>
+      	<section>
+      		<pre>
+//Server side
+X-UA-Compatible: chrome=1      			
+      		</pre>
+      	</section>
+      	<p>Plus d'infos : <a href="http://www.chromium.org/developers/how-tos/chrome-frame-getting-started">http://www.chromium.org/developers/how-tos/chrome-frame-getting-started</a></p>
+      </article>
+
+      <article>
+      	<h2>
+      		Questions/Réponses
+      	</h2>
+      	<a href="https://plus.google.com/s/%23gmaroc">#gmaroc</a>
+      </article>
+
+      <article>
+      	<h3>
+      		Merci !
+      	</h3>
+      	<ul><i>Ressources utiles</i><br><br><br>
+      		<li>
+      			<a href="http://html5rocks.com">html5rocks.com</a>
+      		</li>
+      		<li>
+      			<a href="http://www.chromeexperiments.com/">chromeexperiments.com</a>
+      		</li>
+      		<li>
+      			<a href="http://www.chromium.org/developers/how-tos/chrome-frame-getting-started">http://www.chromium.org/developers/how-tos/chrome-frame-getting-started</a>
+      		</li>
+      		<li>
+      			<a href="https://www.google.com/chrome">google.com/chrome</a>  :)
+      		</li>
+      	</ul>
+      </article>
+
+      <article style="fill">
+      	<iframe src='http://gdays-html5.appspot.com/gmaroc-doodle' style="height: 6000px; border: none; margin-top: 0px" scrolling="no"></iframe>
+      </article>    
+
+    </section> <!--End of all slides. -->
+        <div style="position: absolute; left: 188px; bottom: 0px; font-size: 22px; font-weight: bold;">
+          #gmaroc
+        </div> 
+  </body>
+</html>

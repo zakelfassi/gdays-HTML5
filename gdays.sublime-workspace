@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ar",
+				"article"
+			],
+			[
+				"ArticleProvide",
+				"ArticleProviderMemory"
+			],
+			[
+				"que",
+				"querystring.parse(qs, sep, eq);"
+			],
+			[
+				"postData",
+				"postData"
+			],
+			[
+				"createserve",
+				"http.createServer(requestListener);"
+			],
+			[
+				"http",
+				"http.ServerResponse(req);"
+			],
+			[
+				"base_",
+				"base_url"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/JSLint/JSLint.sublime-build",
+	"command_palette":
+	{
+		"height": 327.0,
+		"selected_items":
+		[
+			[
+				"Zen Coding: ",
+				"Zen Coding: Zen as you type"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Disable Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: I",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: a",
+				"Package Control: Add Channel"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-apps/index.html",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-html5/index.html",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-apps/rsc/styles.css",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/app.yaml",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-apps/images/google-logo-small.png",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-apps/rsc/slides.js",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/ZenCoding/Default.sublime-keymap",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/main.py",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/tunisiatech-workshop/rsc/styles.css",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/tunisiatech-workshop/index.html",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/ZenCoding/Preferences.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/User/zen-coding.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/ZenCoding/zen-coding.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/tunisiatech-workshop/rsc/slides.js",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-html5/rsc/slides.js",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-html5-prez/index.html",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-prez/index.html",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-prez/rsc/slides.js",
+		"/Users/Mac/GDrive Perso/Google Drive/GFiles/gdays-html5/galgeriaextended-prez/rsc/js.js",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/views/blog/new.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/public/stylesheets/style.styl",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/classes/ArticleProviderMemory.js",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/package.json",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/views/blog/articles.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/views/blog.jade",
+		"/Users/Mac/Documents/Work/node-learning/expressstylusexample/app.js",
+		"/Users/Mac/Documents/Work/node-learning/fileuploader/app.js",
+		"/Users/Mac/Documents/Work/node-learning/expressstylusexample/routes/user.js",
+		"/Users/Mac/Documents/Work/node-learning/expressstylusexample/routes/index.js",
+		"/Users/Mac/Documents/Work/node-learning/expressstylusexample/public/stylesheets/style.styl",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/views/error.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/public/stylesheets/style.less",
+		"/Users/Mac/Documents/Work/node-learning/expressstylusexample/package.json",
+		"/Users/Mac/Documents/Work/node-learning/express-mongodb-test/views/layout.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/views/layout.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/views/index.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/routes/index.js",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/app.js",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/public/stylesheets/style.less",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/views/error.jade",
+		"/Users/Mac/Documents/Work/node-learning/express-generated-test/package.json",
+		"/Users/Mac/Documents/Work/node-learning/express-test/package.json",
+		"/Users/Mac/Documents/Work/node-learning/express-test/app.js",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/Mac/Documents/Work/node-learning/router.js",
+		"/Users/Mac/Documents/Work/node-learning/server.js",
+		"/Users/Mac/Documents/Work/node-learning/app.js",
+		"/Users/Mac/Documents/Work/node-learning/requestHandlers.js",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/User/JSLint.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/JSLint/JSLint.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/User/JavaScript.sublime-settings",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Mac/Sites/baz/application/views/includes/core/leftside/profile.php",
+		"/Users/Mac/Sites/baz/js/global.js",
+		"/Users/Mac/Sites/baz/application/views/includes/core/pub.php",
+		"/Users/Mac/Sites/baz/application/views/includes/core/social.php",
+		"/Users/Mac/Sites/baz/application/views/includes/header.php",
+		"/Users/Mac/Sites/baz/application/views/includes/core/leftside/home.php",
+		"/Users/Mac/Sites/baz/application/views/includes/core/leftside/single_pub.php",
+		"/Users/Mac/Sites/baz/application/views/includes/footer.php",
+		"/Users/Mac/Library/Application Support/Sublime Text 2/Packages/User/PHP.sublime-settings",
+		"/Users/Mac/Sites/baz/application/config/database.php",
+		"/Users/Mac/Sites/baz/application/config/config.php",
+		"/Users/Mac/Sites/baz/js/pnl.js",
+		"/Users/Mac/Sites/baz/application/.htaccess",
+		"/Users/Mac/Sites/baz/.htaccess",
+		"/Users/Mac/Sites/baz/application/core/index.html",
+		"/Users/Mac/Sites/baz/sublime-pj"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"<open files>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"small",
+			"html5",
+			"center",
+			"3d85c6",
+			"biglogo",
+			"009925",
+			"ma",
+			"#gmaroc",
+			"ArticleProviderMongoMongo",
+			"ArticleProviderMongoMongoMemory",
+			"ArticleProvider",
+			"just",
+			".load(",
+			"justin"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"ArticleProviderMongo",
+			"ArticleProviderMemory",
+			"ArticleProviderMongo",
+			"ArticleProviderMemory"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.jslint_result_view":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 345.0,
+	"status_bar_visible": true
+}

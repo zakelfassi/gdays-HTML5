@@ -1,0 +1,87 @@
+application: gdays-html5
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /djembe-doodle/css
+  static_dir: djembe-doodle/css
+
+- url: /djembe-doodle/img
+  static_dir: djembe-doodle/img
+
+- url: /djembe-doodle/sounds
+  static_dir: djembe-doodle/sounds
+
+- url: /djembe-doodle/js
+  static_dir: djembe-doodle/js
+
+- url: /gmaroc-doodle/css
+  static_dir: gmaroc-doodle/css
+
+- url: /gmaroc-doodle/img
+  static_dir: gmaroc-doodle/img
+
+- url: /gmaroc-doodle/sounds
+  static_dir: gmaroc-doodle/sounds
+
+- url: /gmaroc-doodle/js
+  static_dir: gmaroc-doodle/js
+
+- url: /codelab/images
+  static_dir: codelab/images
+
+- url: /codelab/rsc
+  static_dir: codelab/rsc
+
+- url: /gcotedivoire-codelab/images
+  static_dir: gcotedivoire-codelab/images
+
+- url: /gcotedivoire-codelab/rsc
+  static_dir: gcotedivoire-codelab/rsc
+
+- url: /gmaroc-codelab/images
+  static_dir: gmaroc-codelab/images
+
+- url: /gmaroc-codelab/rsc
+  static_dir: gmaroc-codelab/rsc
+
+- url: /gmaroc-prez/rsc
+  static_dir: gmaroc-prez/rsc
+
+- url: /gmaroc-prez/images
+  static_dir: gmaroc-prez/images
+
+- url: /gsenegal-prez/rsc
+  static_dir: gsenegal-prez/rsc
+
+- url: /gsenegal-prez/images
+  static_dir: gsenegal-prez/images
+
+- url: /gcotedivoire-prez/rsc
+  static_dir: gcotedivoire-prez/rsc
+
+- url: /gcotedivoire-prez/images
+  static_dir: gcotedivoire-prez/images
+
+- url: /galgeriaextended-html5/rsc
+  static_dir: galgeriaextended-html5/rsc
+
+- url: /galgeriaextended-html5/images
+  static_dir: galgeriaextended-html5/images
+
+- url: /galgeriaextended-apps/rsc
+  static_dir: galgeriaextended-apps/rsc
+
+- url: /galgeriaextended-apps/images
+  static_dir: galgeriaextended-apps/images
+
+- url: /tunisiatech-workshop/rsc
+  static_dir: tunisiatech-workshop/rsc
+
+- url: /tunisiatech-workshop/images
+  static_dir: tunisiatech-workshop/images
+
+- url: /.*
+  script: main.py
+

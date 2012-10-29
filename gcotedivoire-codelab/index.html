@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+           
+  URL: http://code.google.com/p/html5slides/
+  
+  gDays HTML5 : à la redécouverte du web
+  Author : Zakaria El Fassi (Content + Code)
+-->
+
+<html>
+  <head>
+    <title>HTML5 : Refonte du Web.</title>
+
+    <meta charset='utf-8'>
+    <script src='./gcotedivoire-codelab/rsc/slides.js'></script>
+  </head>
+  
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      
+      <!-- Your slides (<article>s) go here. Delete or comment out the
+           slides below. -->
+        
+        
+      
+      <article class='biglogo'>
+      </article>
+
+      <article title="presentation title">
+        <h1>
+          HTML5
+          <br>
+           Refonte du web.
+        </h1>
+        <p>
+          <a href="https://plus.google.com/108433806411556476410">+Zakaria El Fassi</a>
+          <br>
+          <a href="https://plus.google.com/116676956660224968704/posts">+Marie Azulay</a>
+          <br><br><br>
+          Mai 2012
+          <br>
+          #gcotedivoire
+        </p>
+      </article>
+
+	  <article class="smaller">
+	  	<h3>
+	  		API Son
+	  	</h3>
+	  	<p>Exemple de code : inline Audio tag</p>
+	  	<p><a href="http://gdays-html5.appspot.com/codelab/rsc/loop.mp3">http://gdays-html5.appspot.com/codelab/rsc/loop.mp3</a></p>
+	  	<section>
+	  		<pre>
+&lt;audio id="audio" src="loop.mp3" loop="true" controls&gt;&lt;/audio&gt;
+	  		</pre>
+	  	</section>
+	  	
+	  	<p>En utilisant JavaScript</p>
+	  	<section>
+	  		<pre>
+&lt;script&gt;
+var objetSon = new Audio( 'loop.mp3' );
+objetSon.preload = 'auto';
+
+document.addEventListener("keypress", function() {objetSon.play();}, false);
+&lt;/script&gt;	  			
+	  		</pre>
+	  	</section>
+	  	
+	  </article>
+	  
+	  <article class="smaller">
+	  	<h3>
+	  		Canvas
+	  	</h3>
+	  	<p>Dessin de rectangle</p>
+	  	<section>
+	  		<pre>
+&lt;canvas id="monCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"&gt;
+	Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+	var c=document.getElementById("monCanvas");
+	var ctx=c.getContext("2d");
+	ctx.fillStyle="#ABD432";
+	ctx.fillRect(10,0,150,75);
+&lt;/script&gt;
+	  		</pre>
+	  	</section>
+	  </article>
+	  	
+	  	
+	  	<article class="smaller">
+	  		<h3>
+	  			Canvas
+	  		</h3>
+	  		<p>Dessin de cercle</p>
+	  	<section>
+	  		<pre>
+&lt;canvas id="monSecondCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"&gt;
+	Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+	var c=document.getElementById("monSecondCanvas");
+	var ctx=c.getContext("2d");
+	
+	ctx.fillStyle="#AEC432";
+	ctx.beginPath();
+	ctx.arc(70,18,15,0,Math.PI,true);
+	ctx.closePath();
+	ctx.fill();
+&lt;/script&gt;
+	  		</pre>
+	  	</section>
+	  		  		
+	  	</article>
+	  	
+		<article class="smaller">
+			<h3>
+				Canvas
+			</h3>
+			<p>Dessin d'une image sur une Canvas</p>
+			<p><a href="http://gdays-html5.appspot.com/codelab/images/google-logo-small.png">http://gdays-html5.appspot.com/codelab/images/google-logo-small.png</a></p>
+			<section>
+				<pre>
+&lt;canvas id="monTroisiemeCanvas" width="200" height="100" style="border:1px solid #c3c3c3;"&gt;
+	Your browser does not support the canvas element.
+&lt;/canvas&gt;
+
+&lt;script&gt;
+	var c=document.getElementById("monTroisiemeCanvas");
+	var ctx=c.getContext("2d");
+	var img=new Image();
+	img.onload = function(){
+		ctx.drawImage(img,0,0);
+	};
+	img.src="gcotedivoire.png";
+&lt;/script&gt;					
+				</pre>
+			</section>
+		</article>
+
+		<article class="smaller">
+			<h3>
+				CSS3
+			</h3>
+			<p>Exemple de transition</p>
+			
+			<section>
+				<pre>
+&lt;style type="text/css"&gt; 
+	#myDiv
+	{
+		width:100px;
+		height:100px;
+		background: blue;
+		transition:width 2s;
+		-moz-transition:width 2s; /* Firefox 4 */
+		-webkit-transition:width 2s; /* Safari and Chrome */
+		-o-transition:width 2s; /* Opera */
+	}
+	
+	#myDiv:hover
+	{
+		width:300px;
+	}
+&lt;/style&gt;
+
+&lt;div id="myDiv"&gt;&lt;/div&gt;				
+				</pre>
+			</section>
+		</article>
+
+		<article class="smaller">
+			<h3>
+				CSS3
+			</h3>
+			<p>Exemple d'animation</p>
+			
+			<section>
+				<pre>
+&lt;style type="text/css"&gt; 
+	#monSecondDiv
+	{
+		width: 300px;
+		height: 300px;
+		background: red;
+		animation: monanimation 5s;
+		-webkit-animation: monanimation 5s; /* Safari and Chrome */
+	}
+	
+	@-webkit-keyframes monanimation /* Safari and Chrome */
+	{
+		0%   {background:red; width:300px;}
+		25%  {background:yellow; width:200px;}
+		50%  {background:blue; width:250px;}
+		100% {background:green; width:320px;}
+	}
+&lt;/style&gt;
+
+&lt;div id="monSecondDiv"&gt;&lt;/div&gt;
+				</pre>
+			</section>
+		</article>
+
+		<article class="smaller">
+			<h3>
+				CSS3
+			</h3>
+			<p>Exemple de styling : text-shadow</p>
+			
+			<section>
+				<pre>
+&lt;style&gt;
+	h1 {text-shadow:2px 2px blue;}
+&lt;/style&gt;
+
+&lt;h1&gt;Hello CSS3 !&lt;/h1&gt;
+				</pre>
+			</section>
+		</article>
+
+	  <article class="smaller">
+	  	<h3>
+	  		Localstorage
+	  	</h3>
+	  	<section>
+	  		<pre>
+&lt;script&gt;
+	function clickCounter()
+	{
+	if(typeof(Storage)!=="undefined")
+	  {
+	  if (localStorage.clickcount)
+	    {
+	    localStorage.clickcount=Number(localStorage.clickcount)+1;
+	    }
+	  else
+	    {
+	    localStorage.clickcount=1;
+	    }
+	  document.getElementById("result").innerHTML="Vous avez clique " + 
+	  		localStorage.clickcount + " fois.";
+	  }
+	else
+	  {
+	  document.getElementById("result").innerHTML="Indisponible !";
+	  }
+	}
+&lt;/script&gt;
+
+&lt;button onclick="clickCounter()" type="button"&gt;Appuyez !&lt;/button&gt;
+&lt;div id="result"&gt;&lt;/div&gt;	  			
+	  		</pre>
+	  	</section>
+	  </article>
+	  
+	  <article>
+	  	<h3>
+	  		<a href="http://gdays-html5.appspot.com/djembe-doodle" target="_blank">Le Djoodle</a> !
+	  	</h3>
+	  	<a href="http://gdays-html5.appspot.com/gcotedivoire-codelab/rsc/gcotedivoire-codelab-source.zip">Codelab source</a>
+	  	<a href="http://gdays-html5.appspot.com/djembe-doodle/js/djoodle.js">Code source JS</a>
+	  	<a href="http://gdays-html5.appspot.com/djembe-doodle/img/doodle-sprite.png">Sprite image</a>	  	
+	  </article>
+
+    </section> <!--End of all slides. -->
+        <div style="position: absolute; left: 188px; bottom: 0px;">
+          #gcotedivoire
+        </div>     
+  </body>
+</html>

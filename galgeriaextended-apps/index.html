@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<!--
+  Google HTML5 slide template
+
+  Authors: Luke Mahé (code)
+           Marcin Wichary (code and design)
+           
+           Dominic Mazzoni (browser compatibility)
+           Charles Chen (ChromeVox support)
+           
+  URL: http://code.google.com/p/html5slides/
+  
+  gAlgeriaExtended Drive SDK / Apps Script.
+  Author : Zakaria El Fassi (Content + Code)
+-->
+
+<html>
+  <head>
+    <title>HTML5 Avancé.</title>
+
+    <meta charset='utf-8'>
+    <script src='./galgeriaextended-apps/rsc/slides.js'></script>
+    <script src="./galgeriaextended-apps/rsc/jquery.min.js"></script>
+    <script src="./galgeriaextended-apps/rsc/js.js"></script> 
+  </head>
+
+  <body style='display: none'>
+
+    <section class='slides layout-regular template-default'>
+      
+      <article class='biglogo'>
+      </article>
+
+      <article title="presentation title">
+        <h1>
+          Google Drive SDK
+          <br>
+           Google Apps Script
+        </h1>
+        <p>
+          <a href="https://plus.google.com/108433806411556476410" target="_blank">+Zakaria El Fassi</a>
+          <br>
+          <a href="https://twitter.com/zakelfassi" target="_blank">@zakelfassi</a>
+          <br><br><br>
+          Septembre 2012
+          <br>
+          #gAlgeriaExtended
+          <br>
+        </p>
+      </article>
+
+      <article title="sommaire">
+        <h3>
+          Sommaire
+        </h3>
+        <ul class="build">
+          <li>Google Drive : Aperçu &amp; fonctionnement</li>
+          <li>Google Drive SDK</li>          
+          <li>Google Apps</li>
+          <li>Google Apps Script</li>
+        </ul>
+      </article>
+
+      <article>
+      	<h2>
+          <img src="/galgeriaextended-apps/images/drive.png" alt="" align="middle">
+      		Google Drive
+      	</h2>
+      </article>
+
+
+      <article>
+        <h2>
+          <img src="/galgeriaextended-apps/images/appsscript.png" alt="" align="middle">
+          Google Apps Script
+        </h2>
+      </article>
+
+
+      <article>
+        <h3>d'abord, Google Apps !</h3>
+        <ul class="build">
+          <li>Calendar</li>
+          <li>Tasks</li>
+          <li>Gmail</li>
+          <li>Contacts</li>
+          <li>Documents</li>
+          <li>Spreadsheets</li>
+          <li>Sites</li>
+        </ul>
+        <img src="./galgeriaextended-apps/images/googleapps.jpg" alt="" align="center" height="200">
+      </article>
+
+      <article>
+        <h3>Deux méthodes d'accès :</h3>
+        <ul class="build">
+          <li>Applications APIs (REST)</li>
+          <li>Apps Script</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Les API REST</h3>
+          <ul>
+            <li>Avoir un compte Google</li>
+            <li>Enregistremment du projet dans la console d'APIs / API key</li>
+            <li>Fonctionnement REST</li>
+            <li>JSON</li>
+            <li>Choisi une librairie client (Java/Python/PHP/.Net/Ruby/...)</li>
+            <li>Des milliers de lignes de code</li>
+            <li>...</li>
+          </ul>
+      </article>
+
+      <article>
+        <h3>Apps Script</h3>
+          <ul>
+            <li>Avoir un comptre Google</li>
+            <li>Connaissances en Javascript (HTML/CSS)</li>
+            <li>script.google.com</li>
+          </ul>
+      </article>
+
+
+      <article>
+        <h3>Apps Script, en bref.</h3>
+        <ul>
+          <li>Automatisation des tâches et processus</li>
+          <li>Création de fonctions au sein des feuilles de calcul</li>
+          <li>Ajout de menus et boites de dialogues au sein des produits Google</li>
+          <li>...</li>
+        </ul>
+      </article>
+
+      
+      <article>
+        <h3>Pourquoi Apps Script ?</h3>
+        <ul>
+          <li>Au sein du navigateur</li>
+          <li>Les scripts sont enregistrés dans le Cloud</li>
+          <li>Partage / Publication des scripts</li>
+          <li>Les scripts tournent au sein du Cloud de Google</li>
+          <li>Sécurité et stabilité</li>
+        </ul>
+      </article>
+
+
+      <article>
+        <h3>Hello Apps Script !</h3>
+        <ul>
+          <li>Drive > Create > More > Script</li>
+          <li>http://script.google.com</li>
+        </ul>
+      </article>
+
+       <article>
+        <h3>Hello Apps Script !</h3>
+        <section>
+          <pre>
+function createAndSendDocument() {
+  var doc = DocumentApp.create('Hello Apps Script !');
+
+  doc.appendParagraph('Ceci est un nouveau paragraphe.');
+
+  doc.saveAndClose();
+
+  var docUrl = doc.getUrl();
+
+  var email = Session.getActiveUser().getEmail();
+  
+  GmailApp.sendEmail(email, 'Nouveau document',
+                     'Cet email est envoyé automatiquement'+
+                     ' via le script ' + docUrl);
+}
+          </pre>
+        </section>
+      </article>
+
+      <article>
+        <h2>En action ...</h2>
+      </article>
+
+      <article class="smaller">
+        <h3>Mashup : Maps, Spreadsheets, Gmail</h3>
+        <section>
+          <pre>
+function mashup() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  var adresse = sheet.getRange("A2").getValue();
+  var email = sheet.getRange("B2").getValue();  
+  
+  var map = Maps.newStaticMap().addMarker(adresse);
+    
+  GmailApp.sendEmail(email, /* Email */
+                    "Map", /* Sujet */
+                    "L'adresse est : " +
+                     map.getMapUrl() /* Body */);
+}            
+          </pre>
+        </section>
+        <img src="./galgeriaextended-apps/images/mashup.png" alt="">
+      </article>
+
+
+      <article class="smaller">
+        <h3>Mashup avancé : Maps, Spreadsheets, Gmail</h3>
+        <section>
+          <pre>
+function mashup() {
+  var sheet = SpreadsheetApp.getActiveSheet();
+  for(var i = 2; i &lt; 4; i++) {
+    var adresse = sheet.getRange("A" + i).getValue(); // Adresses
+    var email = sheet.getRange("B" + i).getValue();  // Emails
+    
+    var map = Maps.newStaticMap().addMarker(adresse);
+      
+      GmailApp.sendEmail(email, /* Email */
+                    "Map", /* Sujet */
+                    "L'adresse est : " +
+                     map.getMapUrl() /* Body */);
+  }
+
+}
+          </pre>
+        </section>
+        <img src="./galgeriaextended-apps/images/mashup-avance.png" alt="">        
+      </article>
+
+      <article>
+        <h3>Types de scripts</h3>
+        <ul><b>'Standalone' scripts</b></ul>
+        <ul><b>UI Services</b>
+          <li>Composants GWT</li>
+          <li>GUI Builder (drag and drop)</li>
+          <li>Limitation de customisation</li>
+        </ul>
+        <ul><b>HtmlService</b>
+          <li>Usage de HTML/CSS/Javascript</li>
+          <li>Sanitisation (Caja)</li>
+        </ul>
+      </article>
+
+      <article>
+        <h3>Exemple en HtmlService</h3>
+        <section>
+          <pre>
+//Code goes here.            
+          </pre>
+        </section>
+      </article>
+
+
+      <article>
+      	<h2>
+      		Questions/Réponses
+      	</h2>
+      	<a href="https://plus.google.com/s/%23gAlgeriaExtended">#gAlgeriaExtended</a>
+      </article>
+
+      <article>
+        <h3>
+          Merci !
+        </h3>
+        <ul><i>Ressources utiles</i><br><br><br>
+          <li><a href="https://developers.google.com/drive/" target="_blank">https://developers.google.com/drive/</a></li>
+          <li><a href="https://developers.google.com/apps-script/" target="_blank">https://developers.google.com/apps-script/</a></li>
+          <li><a href="#" target="_blank">link_3</a></li>
+          <li><a href="#" target="_blank">link_4</a></li>
+        </ul>
+      </article>      
+
+
+    </section> <!--End of all slides. -->
+        <div style="position: absolute; left: 188px; bottom: 0px; font-size: 22px; font-weight: bold;">
+          #gAlgeriaExtended
+        </div> 
+  </body>
+</html>
